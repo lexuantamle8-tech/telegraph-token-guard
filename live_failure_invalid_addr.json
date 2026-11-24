@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-11-24T15:43:34.359173+00:00",
+  "network": "sepolia-testnet",
+  "mode": "live",
+  "chain": "ethereum",
+  "token_address": "invalid-address-0x123",
+  "symbol": "BAD",
+  "notional_usd": 500.0,
+  "verdict": "REJECT",
+  "risk_score": 100,
+  "reasons": [
+    "Input validation failed ($0.00 spent): Invalid EVM 0x address for ethereum: 'invalid-address-0x123'"
+  ],
+  "total_intelligence_cost_usd": 0.0,
+  "cost_to_notional_bps": 0.0,
+  "simulated_trade_action": "BLOCKED_BEFORE_INTELLIGENCE_PURCHASE",
+  "pillar_statuses": {},
+  "job_ids": [],
+  "sources": [],
+  "raw_answers": {}
+}

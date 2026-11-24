@@ -1,0 +1,56 @@
+{
+  "timestamp_utc": "2026-11-24T15:53:23.565538+00:00",
+  "network": "sepolia-testnet",
+  "mode": "live",
+  "chain": "ethereum",
+  "token_address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "symbol": "USDC",
+  "notional_usd": 2500.0,
+  "verdict": "REVIEW",
+  "risk_score": 25,
+  "reasons": [
+    "ONCHAIN_METRIC_VERIFY returned status='partial' (fail-closed penalty +25)."
+  ],
+  "total_intelligence_cost_usd": 0.04,
+  "cost_to_notional_bps": 0.16,
+  "simulated_trade_action": "SIMULATED_TRADE_HELD_FOR_HUMAN_REVIEW ($2,500.00 USDC on ethereum)",
+  "pillar_statuses": {
+    "ONCHAIN_METRIC_VERIFY": "partial"
+  },
+  "job_ids": [
+    "ec20b24a-566e-4276-91f9-25170df69667"
+  ],
+  "sources": [
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "question": "What is the current price of USDC in USD?",
+      "kind": "miner",
+      "miner": {
+        "slug": "vulnrank-triage",
+        "name": "VulnRank - Security, Compliance and Verified Lookups",
+        "rank": 1
+      },
+      "routedBy": "node",
+      "delivery": "specialist",
+      "supply": "unknown",
+      "receiptHash": "0x0013edae1aeab7585ce4935933c687ba34732516eba72d20208ac10c091cb50d"
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "question": "What is the current market price of USDC in USD based on reliable centralized exchange data (e.g. Coinbase, Kraken), and reconcile any discrepancies between sources to provide a single verified value?",
+      "kind": "miner",
+      "miner": {
+        "slug": "vulnrank-triage",
+        "name": "VulnRank - Security, Compliance and Verified Lookups",
+        "rank": 1
+      },
+      "routedBy": "node",
+      "delivery": "specialist",
+      "supply": "unknown",
+      "receiptHash": "0x40727f4b1137eea3475c9b7660283f2767774b01195017f20eada4e67e65d787"
+    }
+  ],
+  "raw_answers": {
+    "ONCHAIN_METRIC_VERIFY": "The current USD price of USDC is approximately $1.00, with sources reporting slight variations: one result states $0.9999 USD (mean of Coinbase and Kraken, spread 0.02%), and another reports $0.99995 USD (spread 0.01%). These values are based on data from centralized exchanges like Coinbase and Kraken, but there is a minor conflict between the two figures.\n\nRegarding the verified on-chain liquidity depth for USDC on Ethereum (contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) in DEX pools such as Uniswap or SushiSwap, no valid data was returned. Both attempts to retrieve this information failed \u2014 one returned unrelated total value locked (TVL) data, and the other failed because the protocols were not recognized.\n\nThus, the liquidity depth specific to USDC trading pairs on DEXs could not be determined from the available results."
+  }
+}

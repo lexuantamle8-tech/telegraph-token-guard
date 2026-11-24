@@ -1,0 +1,56 @@
+{
+  "timestamp_utc": "2026-11-24T15:49:47.886291+00:00",
+  "network": "sepolia-testnet",
+  "mode": "live",
+  "chain": "ethereum",
+  "token_address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "symbol": "USDC",
+  "notional_usd": 2500.0,
+  "verdict": "REVIEW",
+  "risk_score": 25,
+  "reasons": [
+    "ONCHAIN_METRIC_VERIFY returned status='partial' (fail-closed penalty +25)."
+  ],
+  "total_intelligence_cost_usd": 0.06,
+  "cost_to_notional_bps": 0.24,
+  "simulated_trade_action": "SIMULATED_TRADE_HELD_FOR_HUMAN_REVIEW ($2,500.00 USDC on ethereum)",
+  "pillar_statuses": {
+    "ONCHAIN_METRIC_VERIFY": "partial"
+  },
+  "job_ids": [
+    "a7985e76-b240-4f4f-8869-069305eedb68"
+  ],
+  "sources": [
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "question": "What is the current price of USDC in USD?",
+      "kind": "miner",
+      "miner": {
+        "slug": "vulnrank-triage",
+        "name": "VulnRank - Security, Compliance and Verified Lookups",
+        "rank": 1
+      },
+      "routedBy": "node",
+      "delivery": "specialist",
+      "supply": "unknown",
+      "receiptHash": "0x22647762534e1de1ca40980c48df2eb1c4ddfb730e0f94b1f9a1b751dac2ed55"
+    },
+    {
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "question": "Provide a liquidity and security assessment for USDC on Ethereum (contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48), including depth, trading activity, audit status, and regulatory compliance.",
+      "kind": "miner",
+      "miner": {
+        "slug": "sentinel-risk-oracle",
+        "name": "Telegraph Sentinel Risk Intelligence",
+        "rank": 7
+      },
+      "routedBy": "node",
+      "delivery": "specialist",
+      "supply": "unknown",
+      "receiptHash": "0x455cf71a7344d7a7befd42912b0353a25b079167fe2a83e1c1f84ff4b9aa3e8e"
+    }
+  ],
+  "raw_answers": {
+    "ONCHAIN_METRIC_VERIFY": "The current price of USDC is $1.0000 USD, based on a mean of Coinbase ($1.00) and Kraken ($1.00), as of 2026-11-24T15:50:15Z (provider: VulnRank).\n\nThe 24-hour trading volume and market capitalization of USDC on Ethereum could not be retrieved, as the requested data was not provided by any source.\n\nThe verified liquidity depth for USDC (contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) on Ethereum is approximately $3,888,893.96 USD, with sub-0.05% slippage on standard trades, indicating active market making (provider: Telegraph Sentinel Risk Intelligence). However, information on audit status, regulatory compliance, and broader trading activity was not included, limiting the completeness of the security and liquidity assessment.\n\nNo data was returned regarding known honeypot, exploit, or rug-pull warnings for USDC from trusted blockchain threat intelligence sources.\n\nIn summary:\n- **Price**: $1.0000 USD\n- **24h Trading Volume**: Not available\n- **Market Cap**: Not available\n- **Liquidity/Security Status**: Partial data on liquidity depth and slippage; missing audit and regulatory details\n- **Security Warnings**: No threat intelligence screening result provided\n\nYou may want to try a more targeted query for market data or security alerts, or consult a comprehensive DeFi analytics platform for full metrics.\n\nStill needed: 24h trading volume of USDC; market cap of USDC; overall liquidity/security status of USDC; any known honeypot, exploit, or rug-pull warnings for USDC."
+  }
+}
